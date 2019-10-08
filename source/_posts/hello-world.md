@@ -41,4 +41,15 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 $ hexo deploy
 ```
 
+``` bash
+$ hexo generate (hexo g) 生成静态文件
+$ hexo server (hexo s) 启动本地服务
+$ hexo deploy (hexo d) 提交到远程仓库
+$ hexo new page "xx"(hexo n page) 创建页面 
+$ hexo new "xx" (hexo n "") 创建文章
+$ hexo d -g 生成静态并提交到远程仓库
+$ hexo s -g 生成静态文件并启动本地预览
+$ hexo clean 清除本地 public 文件
+```
+
 More info: [Deployment](https://hexo.io/docs/deployment.html)

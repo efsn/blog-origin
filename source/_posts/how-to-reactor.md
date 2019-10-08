@@ -1,12 +1,12 @@
 ---
-title: how to reactor
+title: How to reactor
 date: 2019-07-22 22:38:44
 tags:
 - functional
 - reactive
 categories:
 ---
-# How to Reactor
+
 > What's Reactive
 >
 > Why's Reactive
