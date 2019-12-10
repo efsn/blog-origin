@@ -9,7 +9,7 @@
 /**
  * Customized by Ivan.Nginx
  *
- * - Refactored with eslint-config-theme-next1 style.
+ * - Refactored with eslint-config-theme-next style.
  */
 
 (function($) {

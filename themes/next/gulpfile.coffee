@@ -11,7 +11,7 @@ gulp.task 'lint', ->
     './source/js/utils.js',
     './source/js/motion.js',
     './source/js/algolia-search.js',
-    './source/js/next1-boot.js',
+    './source/js/next-boot.js',
     './source/js/post-details.js',
     './source/js/schemes/muse.js',
     './source/js/schemes/pisces.js'

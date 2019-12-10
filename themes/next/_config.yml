@@ -3,10 +3,10 @@
 # See: https://theme-next.org/docs/theme-settings/
 # ---------------------------------------------------------------
 
-# If false, merge configs from `_data/next1.yml` into default configuration (rewrite).
-# If true, will fully override default configuration by options from `_data/next1.yml` (override). Only for NexT settings.
-# And if true, all config from default NexT `_config.yml` must be copied into `next1.yml`. Use if you know what you are doing.
-# Useful if you want to comment some options from NexT `_config.yml` by `next1.yml` without editing default config.
+# If false, merge configs from `_data/next.yml` into default configuration (rewrite).
+# If true, will fully override default configuration by options from `_data/next.yml` (override). Only for NexT settings.
+# And if true, all config from default NexT `_config.yml` must be copied into `next.yml`. Use if you know what you are doing.
+# Useful if you want to comment some options from NexT `_config.yml` by `next.yml` without editing default config.
 override: false
 
 # Allow to cache content generation. Introduced in NexT v6.0.0.
@@ -34,9 +34,9 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next1.png
-  medium: /images/favicon-32x32-next1.png
-  apple_touch_icon: /images/apple-touch-icon-next1.png
+  small: /images/favicon-16x16-next.png
+  medium: /images/favicon-32x32-next.png
+  apple_touch_icon: /images/apple-touch-icon-next.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
@@ -234,7 +234,7 @@ toc:
   enable: true
   # Automatically add list number to toc.
   number: true
-  # If true, all words will placed on next1 lines if header width longer then sidebar width.
+  # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: true
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
   expand_all: true
@@ -1055,18 +1055,18 @@ vendors:
   # Internal version: 1.0.0
   # See: https://github.com/theme-next/theme-next-canvas-nest
   # Example:
-  # canvas_nest: //cdn.jsdelivr.net/gh/theme-next1/theme-next1-canvas-nest@1/canvas-nest.min.js
-  # canvas_nest_nomobile: //cdn.jsdelivr.net/gh/theme-next1/theme-next1-canvas-nest@1/canvas-nest-nomobile.min.js
+  # canvas_nest: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js
+  # canvas_nest_nomobile: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest-nomobile.min.js
   canvas_nest:
   canvas_nest_nomobile:
 
   # Internal version: 1.0.0
   # See: https://github.com/theme-next/theme-next-three
   # Example:
-  # three: //cdn.jsdelivr.net/gh/theme-next1/theme-next1-three@1/three.min.js
-  # three_waves: //cdn.jsdelivr.net/gh/theme-next1/theme-next1-three@1/three-waves.min.js
-  # canvas_lines: //cdn.jsdelivr.net/gh/theme-next1/theme-next1-three@1/canvas_lines.min.js
-  # canvas_sphere: //cdn.jsdelivr.net/gh/theme-next1/theme-next1-three@1/canvas_sphere.min.js
+  # three: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js
+  # three_waves: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three-waves.min.js
+  # canvas_lines: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_lines.min.js
+  # canvas_sphere: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_sphere.min.js
   three:
   three_waves:
   canvas_lines:
@@ -1075,7 +1075,7 @@ vendors:
   # Internal version: 1.0.0
   # See: https://github.com/zproo/canvas-ribbon
   # Example:
-  # canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next1/theme-next1-canvas-ribbon@1/canvas-ribbon.js
+  # canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
   canvas_ribbon:
 
   # Internal version: 4.0.7
@@ -1094,21 +1094,21 @@ vendors:
   # Internal version: 1.0.0
   # See: https://github.com/revir/need-more-share2
   # Example:
-  # needmoreshare2_js: //cdn.jsdelivr.net/gh/theme-next1/theme-next1-needmoreshare2@1/needsharebutton.min.js
-  # needmoreshare2_css: //cdn.jsdelivr.net/gh/theme-next1/theme-next1-needmoreshare2@1/needsharebutton.min.css
+  # needmoreshare2_js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js
+  # needmoreshare2_css: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css
   needmoreshare2_js:
   needmoreshare2_css:
 
   # Internal version: 1.0.0
   # See: https://github.com/theme-next/theme-next-bookmark
   # Example:
-  # bookmark: //cdn.jsdelivr.net/gh/theme-next1/theme-next1-bookmark@1/bookmark.min.js
+  # bookmark: //cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@1/bookmark.min.js
   bookmark:
 
   # Internal version: 1.2.0
   # See: https://github.com/theme-next/theme-next-reading-progress
   # Example:
-  # reading_progress: //cdn.jsdelivr.net/gh/theme-next1/theme-next1-reading-progress@1/reading_progress.min.js
+  # reading_progress: //cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1/reading_progress.min.js
   reading_progress:
 
   # valine

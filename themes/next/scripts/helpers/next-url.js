@@ -1,5 +1,5 @@
 /**
- * next1-url.js | https://theme-next.org/api/helpers/next-url/
+ * next-url.js | https://theme-next.org/api/helpers/next-url/
  */
 
 /* global hexo */

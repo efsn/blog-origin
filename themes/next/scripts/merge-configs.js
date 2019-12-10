@@ -9,9 +9,9 @@ hexo.on('generateBefore', function() {
     var data = hexo.locals.get('data');
 
     /**
-     * Merge configs from _data/next1.yml into hexo.theme.config.
-     * If `override`, configs in next1.yml will rewrite configs in hexo.theme.config.
-     * If next1.yml not exists, merge all `theme_config.*` into hexo.theme.config.
+     * Merge configs from _data/next.yml into hexo.theme.config.
+     * If `override`, configs in next.yml will rewrite configs in hexo.theme.config.
+     * If next.yml not exists, merge all `theme_config.*` into hexo.theme.config.
      */
     if (data && data.next) {
       if (data.next.override) {

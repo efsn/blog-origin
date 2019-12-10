@@ -214,7 +214,7 @@
         '<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.28 15.7l-1.34 1.37L5 12l4.94-5.07 1.34 1.38-2.68 2.72H19v1.94H8.6z"/></svg></div>' +
         "</button>",
 
-      arrowRight: '<button data-fancybox-next1 class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
+      arrowRight: '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
         '<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.4 12.97l-2.68 2.72 1.34 1.38L19 12l-4.94-5.07-1.34 1.38 2.68 2.72H5v1.94z"/></svg></div>' +
         "</button>",
 
@@ -323,8 +323,8 @@
     //
     // Possible values:
     //   "close"           - close instance
-    //   "next1"            - move to next1 gallery item
-    //   "nextOrClose"     - move to next1 gallery item or close if gallery has only one item
+    //   "next"            - move to next gallery item
+    //   "nextOrClose"     - move to next gallery item or close if gallery has only one item
     //   "toggleControls"  - show/hide controls
     //   "zoom"            - zoom image (if loaded)
     //   false             - do nothing
@@ -539,7 +539,7 @@
     // All group items
     self.group = [];
 
-    // Existing slides (for current, next1 and previous gallery items)
+    // Existing slides (for current, next and previous gallery items)
     self.slides = {};
 
     // Create group elements
@@ -888,7 +888,7 @@
 
           self.previous();
         })
-        .on("touchstart.fb-next1 click.fb-next1", "[data-fancybox-next1]", function (e) {
+        .on("touchstart.fb-next click.fb-next", "[data-fancybox-next]", function (e) {
           e.stopPropagation();
           e.preventDefault();
 
@@ -1019,7 +1019,7 @@
       $W.off("orientationchange.fb resize.fb");
       $D.off("keydown.fb .fb-idle");
 
-      this.$refs.container.off(".fb-close .fb-prev .fb-next1");
+      this.$refs.container.off(".fb-close .fb-prev .fb-next");
 
       if (self.idleInterval) {
         window.clearInterval(self.idleInterval);
@@ -1035,7 +1035,7 @@
       return this.jumpTo(this.currPos - 1, duration);
     },
 
-    // Change to next1 gallery item
+    // Change to next gallery item
     // ===========================
 
     next: function (duration) {
@@ -1187,7 +1187,7 @@
                   transform: "",
                   opacity: ""
                 })
-                .removeClass("fancybox-slide--next1 fancybox-slide--previous");
+                .removeClass("fancybox-slide--next fancybox-slide--previous");
 
               if (slide.pos === self.currPos) {
                 self.complete();
@@ -1206,7 +1206,7 @@
           prop,
           duration,
           function () {
-            previous.$slide.removeClass(prop).removeClass("fancybox-slide--next1 fancybox-slide--previous");
+            previous.$slide.removeClass(prop).removeClass("fancybox-slide--next fancybox-slide--previous");
           },
           false
         );
@@ -1517,7 +1517,7 @@
       $slide
         .parent()
         .children()
-        .removeClass("fancybox-slide--previous fancybox-slide--next1");
+        .removeClass("fancybox-slide--previous fancybox-slide--next");
 
       $.fancybox.animate(
         $slide, {
@@ -2465,7 +2465,7 @@
       // =========================
       $.fancybox.stop($slide);
 
-      //effectClassName = "fancybox-animated fancybox-slide--" + (slide.pos >= self.prevPos ? "next1" : "previous") + " fancybox-fx-" + effect;
+      //effectClassName = "fancybox-animated fancybox-slide--" + (slide.pos >= self.prevPos ? "next" : "previous") + " fancybox-fx-" + effect;
       effectClassName = "fancybox-slide--" + (slide.pos >= self.prevPos ? "next" : "previous") + " fancybox-animated fancybox-fx-" + effect;
 
       $slide.addClass(effectClassName).removeClass("fancybox-slide--current"); //.addClass(effectClassName);
@@ -2611,7 +2611,7 @@
       current.$slide.scrollTop(0).scrollLeft(0);
     },
 
-    // Preload next1 and previous slides
+    // Preload next and previous slides
     // ================================
 
     preload: function (type) {
@@ -2777,7 +2777,7 @@
       effect = current.opts.animationEffect;
       duration = $.isNumeric(d) ? d : effect ? current.opts.animationDuration : 0;
 
-      current.$slide.removeClass("fancybox-slide--complete fancybox-slide--next1 fancybox-slide--previous fancybox-animated");
+      current.$slide.removeClass("fancybox-slide--complete fancybox-slide--next fancybox-slide--previous fancybox-animated");
 
       if (e !== true) {
         $.fancybox.stop(current.$slide);
@@ -2982,7 +2982,7 @@
       $container.find("[data-fancybox-index]").html(index + 1);
 
       $container.find("[data-fancybox-prev]").prop("disabled", !current.opts.loop && index <= 0);
-      $container.find("[data-fancybox-next1]").prop("disabled", !current.opts.loop && index >= self.group.length - 1);
+      $container.find("[data-fancybox-next]").prop("disabled", !current.opts.loop && index >= self.group.length - 1);
 
       if (current.type === "image") {
         // Re-enable buttons; update download button source
@@ -3102,7 +3102,7 @@
       if (instance) {
         instance.close();
 
-        // Try to find and close next1 instance
+        // Try to find and close next instance
         if (all === true) {
           this.close(all);
         }
@@ -3803,7 +3803,7 @@
       return true;
     }
 
-    // Check for attributes like data-fancybox-next1 or data-fancybox-close
+    // Check for attributes like data-fancybox-next or data-fancybox-close
     for (var i = 0, atts = $el[0].attributes, n = atts.length; i < n; i++) {
       if (atts[i].nodeName.substr(0, 14) === "data-fancybox-") {
         return true;

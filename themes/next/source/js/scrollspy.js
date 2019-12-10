@@ -11,7 +11,7 @@
  *
  * - Add a `clear.bs.scrollspy` event.
  * - Esacpe targets selector.
- * - Refactored with eslint-config-theme-next1 style.
+ * - Refactored with eslint-config-theme-next style.
  */
 
 /* global NexT */
