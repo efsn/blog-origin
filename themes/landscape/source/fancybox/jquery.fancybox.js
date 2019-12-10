@@ -142,7 +142,7 @@
 				iframe   : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen' + (IE ? ' allowtransparency="true"' : '') + '></iframe>',
 				error    : '<p class="fancybox-error">The requested content cannot be loaded.<br/>Please try again later.</p>',
 				closeBtn : '<a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>',
-				next     : '<a title="Next" class="fancybox-nav fancybox-next-v" href="javascript:;"><span></span></a>',
+				next     : '<a title="Next" class="fancybox-nav fancybox-next1-v" href="javascript:;"><span></span></a>',
 				prev     : '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
 			},
 
@@ -161,7 +161,7 @@
 			closeOpacity : true,
 			closeMethod  : 'zoomOut',
 
-			// Changing next-v gallery item
+			// Changing next1-v gallery item
 			nextEffect : 'elastic', // 'elastic', 'fade' or 'none'
 			nextSpeed  : 250,
 			nextEasing : 'swing',
@@ -473,7 +473,7 @@
 			}
 		},
 
-		// Navigate to next-v gallery item
+		// Navigate to next1-v gallery item
 		next: function ( direction ) {
 			var current = F.current;
 
@@ -860,7 +860,7 @@
 			if (!type) {
 				F.coming = null;
 
-				//If we can not determine content type then drop silently or display next-v/prev item if looping through gallery
+				//If we can not determine content type then drop silently or display next1-v/prev item if looping through gallery
 				if (F.current && F.router && F.router !== 'jumpto') {
 					F.current.index = index;
 
