@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: FALL BEHIND OR DROP
-subtitle: 格物致知
-description: Archtech
+title: 格物致知
+subtitle: FALL BEHIND OR DROP
+description: Tech & Life
 keywords:
 author: Arthur Chen
 language: cn
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: hexo-theme-next-7.8.0
 search:
   path: search.xml
   field: post
